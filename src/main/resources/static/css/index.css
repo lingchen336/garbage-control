@@ -1,0 +1,149 @@
+@charset "utf-8";
+* {
+    padding: 0;
+    margin: 0;
+}
+.header {
+    margin: 15px 10px 0 10px;
+}
+.header>ul>.right {
+   float: right;
+}
+
+/* js */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#body ul>li {
+    /* display: table-cell; */
+    list-style: none;
+    margin: 10px;
+    float: left;
+}
+
+#body {
+    /* border: 1px solid red; */
+    position: relative;
+    width: 1120px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#body div.exhibition {
+    position: relative;
+    overflow: hidden;
+    width: 1120px;
+    height: 260px;
+}
+
+#body div.Button {
+    position: absolute;
+    box-sizing: content-box;
+    top: 10px;
+    left: -50px;
+    width: 1220px;
+    height: 240px;
+}
+
+#body ul.box {
+    display: block;
+    position: absolute;
+    width: 3920px;
+    height: 260px;
+}
+
+
+/* 清除浮动流·三件套(子级元素float: left; 在父级元素::after处添加) */
+
+#body ul::after {
+    /* 设置块级属性 */
+    display: block;
+    /* 添加空文本内容 */
+    content: "";
+    /* 清除浮动流的属性 */
+    clear: both;
+}
+
+#body li.image {
+    /* border: 1px solid red; */
+    position: relative;
+    width: 260px;
+    height: 240px;
+    overflow: hidden;
+}
+
+#body li.image div.overspread {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3483b1;
+    text-indent: 5px;
+    opacity: 0.7;
+    top: 215px;
+    line-height: 25px;
+    transition: all 0.3s ease-in;
+}
+
+#body li.image:hover div.overspread {
+    top: 0px;
+    color: #fff;
+}
+
+#body li.image div.overspread span {
+    line-height: 20px;
+}
+
+#body div.Button div {
+    position: absolute;
+    background: #000;
+    opacity: 0.2;
+    width: 50px;
+    height: 240px;
+}
+
+#body div.Button div>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#body div.Button div.left {
+    left: 0;
+}
+
+#body div.Button div.right {
+    right: 0;
+}
+
+#body div.Button div:hover {
+    opacity: 0.5;
+}
+#body div.Button a {
+    text-decoration: none;
+}
+
+#body div.Button div.left a span {
+   display: block;
+   height: 240px;
+   line-height: 240px;
+   text-align: center;
+   color: #5cb85c;
+}
+
+#body div.Button div.right a span {
+    display: block;
+    height: 240px;
+    line-height: 240px;
+    text-align: center;
+    color: #5cb85c;
+}
+.exhibition .box .overspread>span {
+    font-size: 24px;
+    text-align: center;
+    display: block;
+    margin-top: 100px;
+}
